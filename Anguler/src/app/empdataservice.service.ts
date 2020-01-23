@@ -13,35 +13,35 @@ export class EmpdataserviceService {
 
   }
 
-/*
-  employeeList: IEmp[] = [
-    {
-      code: 'emp101', name: 'Tom', gender: 'Male',
-      annualSalary: 5500, dateOfBirth: '1/1/1999'
-    },
-    {
-      code: 'emp102', name: 'Tracy', gender: 'Female',
-      annualSalary: 300, dateOfBirth: '1/1/1998'
-    },
-    {
-      code: 'emp103', name: 'Dave', gender: 'Male',
-      annualSalary: 3666, dateOfBirth: '1/1/2000'
-    }
-  ];*/
+  /*
+    employeeList: IEmp[] = [
+      {
+        code: 'emp101', name: 'Tom', gender: 'Male',
+        annualSalary: 5500, dateOfBirth: '1/1/1999'
+      },
+      {
+        code: 'emp102', name: 'Tracy', gender: 'Female',
+        annualSalary: 300, dateOfBirth: '1/1/1998'
+      },
+      {
+        code: 'emp103', name: 'Dave', gender: 'Male',
+        annualSalary: 3666, dateOfBirth: '1/1/2000'
+      }
+    ];*/
 
   getFromSpringBootClient(): Observable<IEmp[]> {
 
-    console.log("in obesrable ");
+    console.log('in obesrable ');
     const httpOptions = {
       headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': 'http://localhost:3000'
+        'Access-Control-Allow-Origin': 'http://localhost:3001'
       })
     };
-    return this.http.get<IEmp[]>('http://localhost:3000/routes/getUser', httpOptions);
+    return this.http.get<IEmp[]>('http://localhost:3001/routes/getUser', httpOptions);
   }
 
- /* getEmpList(): IEmp[] {
-    return this.employeeList;
-  }
-*/
+  /* getEmpList(): IEmp[] {
+     return this.employeeList;
+   }
+ */
 }

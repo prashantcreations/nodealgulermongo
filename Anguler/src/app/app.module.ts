@@ -10,6 +10,7 @@ import { MyfirstComponentComponent } from './myfirst-component/myfirst-component
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PrefixfornamePipe } from './prefixforname.pipe';
 import { RoutingComponent } from './routing/routing.component';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { RoutingComponent } from './routing/routing.component';
     RoutingComponent,
     EmployeeComponent,
     PrefixfornamePipe,
+    AddemployeeComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,6 @@ import { RoutingComponent } from './routing/routing.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [EmployeeComponent]
+  bootstrap: [RoutingComponent]
 })
 export class AppModule { }

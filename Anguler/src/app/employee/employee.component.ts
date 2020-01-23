@@ -14,14 +14,14 @@ export class EmployeeComponent implements OnInit {
   employeeList: IEmp[];
 
   constructor(private empdataserviceService: EmpdataserviceService) {
-    console.log("in constructor");
+    console.log('in constructor');
   }
   // lifecycle hook
   ngOnInit(): void {
-    console.log("in ");    
-   // this.employeeList = this.empdataserviceService.getEmpList();
+    console.log('in ');
+    // this.employeeList = this.empdataserviceService.getEmpList();
     this.empdataserviceService.getFromSpringBootClient()
       .subscribe(IEmp => this.employeeList = IEmp);
-      console.log(this.employeeList);
+    console.log(this.employeeList);
   }
 }

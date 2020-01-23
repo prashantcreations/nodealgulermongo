@@ -1,0 +1,25 @@
+<h1>Angular 9 Forms Example</h1>
+<form [formGroup]="formdata" (ngSubmit)="onSubmit(formdata.value)">
+  <div>
+    <label>id:</label>
+    <input class="form-control" formControlName="id">
+    <label> name:</label>
+    <input class="form-control" formControlName="name">
+    <label> phone:</label>
+    <input class="form-control" formControlName="phone">
+    <label> email:</label>
+    <input class="form-control" formControlName="email">
+    <label> loginName:</label>
+    <input class="form-control" formControlName="loginName">
+    <label> password:</label>
+    <input class="form-control" formControlName="password">
+    <label> role:</label>
+    <input class="form-control" formControlName="role">
+    <label> status:</label>
+    <input class="form-control" formControlName="status">
+    <label> gender:</label>
+    <input class="form-control" formControlName="gender">
+  </div>
+  <input type="submit" value="Submit" />
+
+</form>
