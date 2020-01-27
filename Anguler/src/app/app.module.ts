@@ -1,16 +1,18 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ChildComponent } from './child/child.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
 import { LogincomponentComponent } from './logincomponent/logincomponent.component';
 import { MyfirstComponentComponent } from './myfirst-component/myfirst-component.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ParentComponent } from './parent/parent.component';
 import { PrefixfornamePipe } from './prefixforname.pipe';
 import { RoutingComponent } from './routing/routing.component';
-import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 
 @NgModule({
@@ -23,14 +25,17 @@ import { AddemployeeComponent } from './addemployee/addemployee.component';
     EmployeeComponent,
     PrefixfornamePipe,
     AddemployeeComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [RoutingComponent]
+  bootstrap: [ParentComponent]
 })
 export class AppModule { }

@@ -6,5 +6,5 @@ export interface IEmp {
     password: string;
     role: string;
     status: string;
-    gender: string 
+    gender: string
 }

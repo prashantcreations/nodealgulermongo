@@ -1,0 +1,42 @@
+<p>parent works!</p>
+<app-child [All]="getTotalEmployeeCount()" [Male]="getMaleEmployeeCount()" [Female]="getFemaleEmployeeCount()"
+  (countRadioButton)="onEmployeeCountRadioButtonChange($event)">
+</app-child>
+<br /><br />
+<table>
+  <thead>
+    <th>id</th>
+    <th>name</th>
+    <th>phone</th>
+    <th>email</th>
+    <th>loginName</th>
+    <th>password</th>
+    <th>role</th>
+    <th>status</th>
+    <th>gender</th>
+  </thead>
+
+  <tbody>
+    <ng-container *ngFor='let employee of iemp'>
+      <tr *ngIf="selectedEmployeeCountRadioButton==='All' || 
+      selectedEmployeeCountRadioButton===employee.gender">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name |prefixforname:employee.gender }}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.loginName}}</td>
+        <td>{{employee.password}}</td>
+        <td>{{employee.role}}</td>
+        <td>{{employee.status}}</td>
+        <td>{{employee.gender }}</td>
+      </tr>
+    </ng-container>
+    <tr *ngIf="!iemp || iemp.length===0">
+      <td colspan="5">
+        No Employee List to Display
+      </td>
+    </tr>
+  </tbody>
+
+
+</table>

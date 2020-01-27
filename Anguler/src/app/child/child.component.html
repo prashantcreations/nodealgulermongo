@@ -1,0 +1,15 @@
+<p>child works!</p>
+<input name='option' type='radio' value='All' [(ngModel)]="onRadioButtonSelectionChange"
+  (change)="onRadioSelectCount()">
+
+<span>{{'All('+All+')'}}</span>
+
+<input name='option' type='radio' value='Male' [(ngModel)]="onRadioButtonSelectionChange"
+  (change)="onRadioSelectCount()">
+
+<span>{{'Male('+Male+')'}}</span>
+
+<input name='option' type='radio' value='Female' [(ngModel)]="onRadioButtonSelectionChange"
+  (change)="onRadioSelectCount()">
+
+<span>{{'Female('+Female+')'}}</span>
