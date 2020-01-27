@@ -21,7 +21,8 @@ export class AddemployeeComponent implements OnInit {
 
   onSubmit(data) {
     console.log(data);
-    this.addEmpService.postEmpData(data);
+    this.addEmpService.postEmpData(data)
+    .subscribe(data=>{console.log(data)});
   }
 
   ngOnInit() {

@@ -1,3 +1,4 @@
+import { IEmp } from './iemp';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -8,7 +9,7 @@ export class AddempserviceService {
 
   constructor(private http: HttpClient) { }
 
-  postEmpData(data): Observable<JSON> {
+  postEmpData(data): Observable<IEmp> {
     console.log('service ' + data);
     console.log('in obesrable ');
     const httpOptions = {
@@ -16,7 +17,7 @@ export class AddempserviceService {
         'Access-Control-Allow-Origin': 'http://localhost:3001'
       })
     };
-    return this.http.post<Stri>('http://localhost:3001/routes/addUser', data, httpOptions);
+    return this.http.post<IEmp>('http://localhost:3001/routes/addUser', data, httpOptions);
   }
 
 
